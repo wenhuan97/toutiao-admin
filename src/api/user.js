@@ -27,3 +27,21 @@ export const getUserProfile = () => {
     // }
   })
 }
+
+// 编辑用户头像
+export const updataUserAvatar = data => {
+  return request({
+    method: 'PATCH',
+    url: '/mp/v1_0/user/photo',
+    data
+  })
+}
+
+// 编辑用户资料
+export const updataUser = data => {
+  return request({
+    method: 'PATCH',
+    url: '/mp/v1_0/user/profile',
+    data
+  })
+}

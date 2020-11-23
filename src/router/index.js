@@ -3,6 +3,12 @@ import VueRouter from 'vue-router'
 import Login from '../views/login'
 import Home from '../views/home'
 import Layout from '../views/layout'
+import Article from '../views/article'
+import Publish from '../views/publish'
+import Images from '../views/images'
+import Comment from '../views/comment'
+import Settings from '../views/setting'
+import Fans from '../views/fans'
 
 Vue.use(VueRouter)
 
@@ -22,6 +28,36 @@ const routes = [
         path: '',
         name: 'home',
         component: Home
+      },
+      {
+        path: '/article',
+        name: 'article',
+        component: Article
+      },
+      {
+        path: '/publish',
+        name: 'publish',
+        component: Publish
+      },
+      {
+        path: '/images',
+        name: 'images',
+        component: Images
+      },
+      {
+        path: '/comment',
+        name: 'comment',
+        component: Comment
+      },
+      {
+        path: '/settings',
+        name: 'settings',
+        component: Settings
+      },
+      {
+        path: '/fans',
+        name: 'fans',
+        component: Fans
       }
     ]
   }
@@ -50,6 +86,11 @@ router.beforeEach((to, from, next) => {
   } else {
     next()
   }
+  // if (to.path === '/login') {
+  //   if (userInfo) {
+  //     next('/')
+  //   }
+  // }
 })
 
 export default router

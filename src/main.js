@@ -6,10 +6,6 @@ import './styles/index.less'
 
 Vue.config.productionTip = false
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
-
 new Vue({
   router,
   render: h => h(App)
