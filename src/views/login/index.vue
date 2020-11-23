@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       user: {
-        mobile: '13955555555', // 手机号
+        mobile: '13911111112', // 手机号
         code: '246810', // 验证码
         agree: true // 是否勾选用户协议的 复选框
       },

@@ -17,7 +17,33 @@ import {
   Dropdown,
   DropdownItem,
   DropdownMenu,
-  MessageBox
+  MessageBox,
+  Card,
+  Breadcrumb,
+  BreadcrumbItem,
+  Radio,
+  RadioGroup,
+  Col,
+  Row,
+  DatePicker,
+  TimePicker,
+  Select,
+  Option,
+  OptionGroup,
+  Table,
+  TableColumn,
+  Pagination,
+  Tag,
+  Image,
+  Loading,
+  RadioButton,
+  Dialog,
+  Upload,
+  Icon,
+  Switch,
+  Avatar,
+  Tabs,
+  TabPane
 } from 'element-ui'
 
 Vue.use(Button)
@@ -35,6 +61,32 @@ Vue.use(MenuItem)
 Vue.use(Dropdown)
 Vue.use(DropdownItem)
 Vue.use(DropdownMenu)
+Vue.use(Card)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
+Vue.use(Radio)
+Vue.use(Select)
+Vue.use(Option)
+Vue.use(OptionGroup)
+Vue.use(RadioGroup)
+Vue.use(Col)
+Vue.use(Row)
+Vue.use(DatePicker)
+Vue.use(TimePicker)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Pagination)
+Vue.use(Tag)
+Vue.use(Image)
+Vue.use(Loading)
+Vue.use(RadioButton)
+Vue.use(Dialog)
+Vue.use(Upload)
+Vue.use(Icon)
+Vue.use(Switch)
+Vue.use(Avatar)
+Vue.use(Tabs)
+Vue.use(TabPane)
 // 配置到全局可用
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm

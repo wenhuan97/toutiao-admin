@@ -1,6 +1,6 @@
 <template>
   <el-menu
-    default-active="1"
+    :default-active="this.$route.path"
     class="nav-menu"
     background-color="#011f34"
     text-color="#fff"
@@ -16,7 +16,7 @@
       <i class="iconfont iconarticle"></i>
       <span slot="title">内容管理</span>
     </el-menu-item>
-    <el-menu-item index="/image">
+    <el-menu-item index="/images">
       <i class="iconfont iconl-img"></i>
       <span slot="title">素材管理</span>
     </el-menu-item>

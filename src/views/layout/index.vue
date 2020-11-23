@@ -48,6 +48,7 @@
 <script>
 import AppAside from './components/aside'
 import { getUserProfile } from '../../api/user'
+import globalBus from '../../utils/global-bus'
 
 export default {
   name: 'layoutIndex',
@@ -66,6 +67,13 @@ export default {
   watch: {},
   created() {
     this.localUserProfile()
+    // 注册 自定义事件 个人设置组件 向 layout组件通信
+    // 当这个事件被 发布 时  注册函数的 事件 才会被调用
+    globalBus.$on('update-user', (data) => {
+      // console.log('update-user')
+      this.user.name = data.name
+      this.user.photo = data.photo
+    })
   },
   mounted() {},
   methods: {
@@ -73,7 +81,7 @@ export default {
     async localUserProfile() {
       const result = await getUserProfile()
       this.user = result.data.data
-      console.log(this.user)
+      // console.log(this.user)
     },
     showCollapse() {
       this.isShows = !this.isShows
