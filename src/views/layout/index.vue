@@ -21,7 +21,7 @@
               'el-icon-s-fold': !isCollapse
             }"
           ></i>
-          <span>超级无敌头条内容发布系统</span>
+          <span>仿头条内容发布系统</span>
         </div>
         <div class="head-right">
           <img :src="user.photo" alt="" />

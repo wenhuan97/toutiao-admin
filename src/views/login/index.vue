@@ -96,6 +96,7 @@ export default {
     login() {
       login(this.user)
         .then((res) => {
+          console.log(res)
           //  将获取到的令牌 token 存储到本地
           const userInfo = res.data.data
           window.localStorage.setItem('userInfo', JSON.stringify(userInfo))
@@ -111,15 +112,13 @@ export default {
           // this.$router.push({
           //   name: 'home'
           // })
-        })
-        .catch(() => {
-          // console.log('登录失败', err)
+        }).catch((err) => {
+          console.log('登录失败', err)
           this.$message.error('登陆失败~')
           this.loginLoading = false // 点击登录后关闭loading效果
         })
     },
     resetLoginForm() {
-      console.log(this)
       this.$refs.loginFormRef.resetFields()
     }
   },

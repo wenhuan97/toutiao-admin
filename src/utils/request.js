@@ -6,7 +6,7 @@ import { Message } from 'element-ui'
 
 // 创建一个axios实例 就是复制了一个axios
 const request = axios.create({
-  baseURL: 'http://ttapi.research.itcast.cn/', // 请求的基础路径
+  baseURL: 'http://api-toutiao-web.itheima.net/', // 请求的基础路径
   // 专门用于定义 后端返回原始数据 的处理
   // data 为后端原始的 字符串数据
   transformResponse: [function (data) {

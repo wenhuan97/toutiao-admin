@@ -201,6 +201,7 @@ export default {
         begin_pubdate: this.rangDate ? this.rangDate[0] : null,
         end_pubdate: this.rangDate ? this.rangDate[1] : null
       })
+      console.log(result)
       this.loading = false
       console.log(result)
       this.articles = result.data.data.results

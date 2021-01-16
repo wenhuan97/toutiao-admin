@@ -5,7 +5,7 @@ import request from '../utils/request'
 export const getArticle = params => {
   return request({
     method: 'GET',
-    url: '/mp/v1_0/articles',
+    url: '/app/v1_0/articles',
     // 设置GET请求体
     // baby参数使用data设置
     // Query参数使用params设置
@@ -18,7 +18,7 @@ export const getArticle = params => {
 export const getChannels = () => {
   return request({
     method: 'GET',
-    url: '/mp/v1_0/channels'
+    url: '/app/v1_0/channels'
   })
 }
 
@@ -26,7 +26,7 @@ export const getChannels = () => {
 export const deleteArt = articleId => {
   return request({
     method: 'DELETE',
-    url: `/mp/v1_0/articles/${articleId}`
+    url: `/app/v1_0/articles/${articleId}`
   })
 }
 
@@ -34,7 +34,7 @@ export const deleteArt = articleId => {
 export const publishArt = (data, draft = false) => {
   return request({
     method: 'POST',
-    url: '/mp/v1_0/articles',
+    url: '/app/v1_0/articles',
     params: { // 是否存为草稿 true存为草稿
       draft
     },
@@ -46,7 +46,7 @@ export const publishArt = (data, draft = false) => {
 export const updateArticle = (id, data, draft = false) => {
   return request({
     method: 'PUT',
-    url: `/mp/v1_0/articles/${id}`,
+    url: `/app/v1_0/articles/${id}`,
     params: { // 是否存为草稿 true存为草稿
       draft
     },
@@ -58,7 +58,7 @@ export const updateArticle = (id, data, draft = false) => {
 export const getArt = (id) => {
   return request({
     method: 'GET',
-    url: `/mp/v1_0/articles/${id}`
+    url: `/app/v1_0/articles/${id}`
   })
 }
 
@@ -66,7 +66,7 @@ export const getArt = (id) => {
 export const updataCommentStatus = (articleId, allowComment) => {
   return request({
     method: 'PUT',
-    url: '/mp/v1_0/comments/status',
+    url: '/app/v1_0/comments/status',
     params: {
       article_id: articleId
     },

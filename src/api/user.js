@@ -8,7 +8,7 @@ import request from '../utils/request'
 export const login = data => {
   return request({
     method: 'POST',
-    url: '/mp/v1_0/authorizations',
+    url: '/app/v1_0/authorizations',
     // 设置POST请求体
     data
   })
@@ -18,7 +18,7 @@ export const login = data => {
 export const getUserProfile = () => {
   return request({
     method: 'GET',
-    url: '/mp/v1_0/user/profile'
+    url: '/app/v1_0/user/profile'
     // 后端要求把需要授权的 用户身份 放到请求头中
     // axios可以通过headers设置请求头
     // headers: {
@@ -32,7 +32,7 @@ export const getUserProfile = () => {
 export const updataUserAvatar = data => {
   return request({
     method: 'PATCH',
-    url: '/mp/v1_0/user/photo',
+    url: '/app/v1_0/user/photo',
     data
   })
 }
@@ -41,7 +41,7 @@ export const updataUserAvatar = data => {
 export const updataUser = data => {
   return request({
     method: 'PATCH',
-    url: '/mp/v1_0/user/profile',
+    url: '/app/v1_0/user/profile',
     data
   })
 }
