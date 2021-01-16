@@ -2,7 +2,9 @@
 import axios from 'axios'
 import JSONbig from 'json-bigint'
 import router from '../router'
-import { Message } from 'element-ui'
+import {
+  Message
+} from 'element-ui'
 
 // 创建一个axios实例 就是复制了一个axios
 const request = axios.create({

@@ -10,7 +10,11 @@ export const login = data => {
     method: 'POST',
     url: '/app/v1_0/authorizations',
     // 设置POST请求体
-    data
+    data,
+    headers: {
+      // 自动将http的不安全请求升级为https不然在github线上会报
+      'Content-Security-Policy': 'upgrade-insecure-requests'
+    }
   })
 }
 
