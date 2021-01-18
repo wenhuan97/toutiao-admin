@@ -1,63 +1,56 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../views/login'
-import Home from '../views/home'
-import Layout from '../views/layout'
-import Article from '../views/article'
-import Publish from '../views/publish'
-import Images from '../views/images'
-import Comment from '../views/comment'
-import Settings from '../views/setting'
-import Fans from '../views/fans'
 
 Vue.use(VueRouter)
 
 // 路由配置
 const routes = [
+
   {
     path: '/login',
     name: 'login',
-    component: Login
+    component: () => import('@/views/login/')
   },
   {
     path: '/',
     // name: 'layout',
-    component: Layout,
+    component: () => import('@/views/layout/'),
     children: [
+
       {
         path: '',
         name: 'home',
-        component: Home
+        component: () => import('@/views/home/')
       },
       {
         path: '/article',
         name: 'article',
-        component: Article
+        component: () => import('@/views/article')
       },
       {
         path: '/publish',
         name: 'publish',
-        component: Publish
+        component: () => import('@/views/publish/')
       },
       {
         path: '/images',
         name: 'images',
-        component: Images
+        component: () => import('@/views/images/')
       },
       {
         path: '/comment',
         name: 'comment',
-        component: Comment
+        component: () => import('@/views/comment/')
       },
       {
         path: '/settings',
         name: 'settings',
-        component: Settings
+        component: () => import('@/views/setting/')
       },
       {
         path: '/fans',
         name: 'fans',
-        component: Fans
+        component: () => import('@/views/fans/')
       }
     ]
   }
