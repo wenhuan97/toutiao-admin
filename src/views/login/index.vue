@@ -2,7 +2,7 @@
   <div class="login-container">
     <el-form ref="loginFormRef" :model="user" class="login-form" :rules="rules">
       <div class="logo">
-        <img src="./logo_index.png" alt="" />
+        <img src="./1.jpg" alt="" />
       </div>
       <el-form-item prop="mobile">
         <el-input v-model="user.mobile" placeholder="请输入手机号"></el-input>
@@ -112,7 +112,8 @@ export default {
           // this.$router.push({
           //   name: 'home'
           // })
-        }).catch((err) => {
+        })
+        .catch((err) => {
           console.log('登录失败', err)
           this.$message.error('登陆失败~')
           this.loginLoading = false // 点击登录后关闭loading效果
@@ -156,9 +157,13 @@ export default {
   }
   .logo {
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    img {
+      width: 259px;
+      height: 120px;
+    }
   }
 }
 </style>

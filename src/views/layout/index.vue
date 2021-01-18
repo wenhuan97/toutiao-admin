@@ -4,7 +4,7 @@
       <div class="logo">
         <img
           :class="[isShows ? 'isShow' : 'isHidden']"
-          src="./logo_index.png"
+          src="./1.jpg"
           alt=""
         />
       </div>
@@ -131,7 +131,8 @@ export default {
 }
 
 .isShow {
-  width: 200px;
+  width: 150px;
+  height: 90px;
   padding: 15px 8px 0;
   box-sizing: border-box;
 }
